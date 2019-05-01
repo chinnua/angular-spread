@@ -1,0 +1,34 @@
+.spreadsheet-container {
+	width: 100%;
+	height: 100%;
+	overflow: auto;
+}
+.spreadsheet-table {
+	border-collapse: collapse;
+	width: auto;
+	height: auto;
+}
+.spreadsheet-table th {
+	font-weight: bold;
+	background-color: #ddd;
+}
+.spreadsheet-table th,
+.spreadsheet-table td {
+	padding: 0em;
+	border: 1px solid #ddd;
+}
+.column-header {
+	background-color: #eee;
+	text-align: center;
+}
+.row-header {
+	background-color: #eee;
+	text-align: center;
+}
+.cell-input {
+	border: none;
+	width: 100%;
+}
+.cell {
+  min-width: 100px;
+}
