@@ -2,12 +2,12 @@
 	<table class="spreadsheet-table">
 		<tr>
 			<td class="row-header"></td>
-			<td *ngFor="let col of columns" class="column-header">{{convertToNumberingScheme(col + 1)}}</td>
+			<td *ngFor="let col of columns" class="column-header">{{getColumnName(col + 1)}}</td>
 		</tr>
 		<tr *ngFor="let row of rows">
 			<td class="row-header">{{row + 1}}</td>
 			<td class="cell" *ngFor="let col of columns">
-        <input type="text" class="cell-input" [(ngModel)]="spreadData[convertToNumberingScheme(col + 1) + (row + 1)]" />
+        <input type="text" class="cell-input" [(ngModel)]="spreadData[getColumnName(col + 1) + (row + 1)]" />
       </td>
   </tr>
 </table>

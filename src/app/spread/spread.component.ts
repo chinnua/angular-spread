@@ -16,8 +16,8 @@ export class SpreadComponent implements OnInit {
 
   ngOnInit() {
     this.spreadProps = {
-      columnCount: 10,
-      rowCount: 10
+      columnCount: 50,
+      rowCount: 100
     };
 
     this.columns = Array.from(Array(this.spreadProps.columnCount)).map((x, i) => i);
@@ -29,7 +29,7 @@ export class SpreadComponent implements OnInit {
     }
   }
 
-  convertToNumberingScheme(number) {
+  getColumnName(number) {
     var baseChar = ("A").charCodeAt(0),
       letters = "";
 
