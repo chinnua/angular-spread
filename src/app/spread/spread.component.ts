@@ -10,6 +10,7 @@ export class SpreadComponent implements OnInit {
   spreadProps: any;
   columns: any;
   rows: any;
+  spreadData: any;
 
   constructor() { }
 
@@ -21,6 +22,11 @@ export class SpreadComponent implements OnInit {
 
     this.columns = Array.from(Array(this.spreadProps.columnCount)).map((x, i) => i);
     this.rows = Array.from(Array(this.spreadProps.rowCount)).map((x, i) => i);
+
+    this.spreadData = {
+      A1: 100,
+      A2: 200
+    }
   }
 
   convertToNumberingScheme(number) {
